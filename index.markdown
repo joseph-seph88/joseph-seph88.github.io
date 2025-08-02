@@ -4,12 +4,16 @@ title: Joseph88
 permalink: /
 ---
 
-# Joseph88
-
-## 풀스택 앱/웹 개발자
-
-Email: pathetic.sim@gmail.com  
-Web: [GitHub Pages](https://joseph-seph88.github.io)
+<div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 2rem;">
+  <div>
+    <h1 style="margin: 0; font-size: 2.5rem;">Joseph88</h1>
+    <h2 style="margin: 0; font-size: 1.5rem; color: #666; font-weight: normal;">앱 풀스택 개발자</h2>
+  </div>
+  <div style="text-align: right;">
+    <p style="margin: 0; font-size: 1rem;">Email: pathetic.sim@gmail.com</p>
+    <p style="margin: 0; font-size: 1rem;">Web: <a href="https://joseph-seph88.github.io">GitHub Pages</a></p>
+  </div>
+</div>
 
 ### About Me
 
@@ -70,7 +74,7 @@ Web: [GitHub Pages](https://joseph-seph88.github.io)
 ### Contact
 
 * GitHub: [joseph-seph88](https://github.com/joseph-seph88)
-* Email: your-email@example.com
+* Email: pathetic.sim@gmail.com
 
 ---
 
