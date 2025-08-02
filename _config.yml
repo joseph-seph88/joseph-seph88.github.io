@@ -1,12 +1,10 @@
 # Site settings
-title: Joseph's Website
-email: your-email@example.com
+title: Joseph88's Website
+email: pathetic.sim@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Joseph의 개인 웹사이트입니다.
-  GitHub Pages와 Jekyll로 만들어졌습니다.
+  Joseph88's Website
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://joseph-seph88.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
 github_username:  joseph-seph88
 
 # Build settings
