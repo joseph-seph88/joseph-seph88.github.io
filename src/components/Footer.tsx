@@ -75,7 +75,7 @@ export default function Footer() {
             };
 
             // PDF 생성 및 다운로드
-            await html2pdf().set(opt).from(clone).save();
+            await html2pdf.default().set(opt).from(clone).save();
 
             console.log('PDF 변환 성공!');
         } catch (error) {
