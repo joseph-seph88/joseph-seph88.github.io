@@ -28,7 +28,7 @@ export default function Footer() {
     const convertToPDF = async () => {
         try {
             // html2pdf 라이브러리 동적 로드
-            const html2pdf = (await import('html2pdf.js')) as any;
+            const html2pdf = await import('html2pdf.js');
 
             // 현재 페이지의 메인 콘텐츠만 선택 (헤더 제외)
             const element = document.querySelector('.max-w-none');
