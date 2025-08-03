@@ -26,62 +26,68 @@ export default function Footer() {
     };
 
     const convertToPDF = async () => {
-        try {
-            // html2pdf 라이브러리 동적 로드
-            const html2pdfModule = await import('html2pdf.js');
-            const html2pdf = (html2pdfModule as any).default || html2pdfModule;
+        // 로컬 개발 환경에서만 PDF 변환 기능 활성화
+        if (process.env.NODE_ENV === 'development') {
+            try {
+                // html2pdf 라이브러리 동적 로드
+                const html2pdfModule = await import('html2pdf.js');
+                const html2pdf = (html2pdfModule as any).default || html2pdfModule;
 
-            // 현재 페이지의 메인 콘텐츠만 선택 (헤더 제외)
-            const element = document.querySelector('.max-w-none');
+                // 현재 페이지의 메인 콘텐츠만 선택 (헤더 제외)
+                const element = document.querySelector('.max-w-none');
 
-            if (!element) {
-                throw new Error('변환할 요소를 찾을 수 없습니다.');
+                if (!element) {
+                    throw new Error('변환할 요소를 찾을 수 없습니다.');
+                }
+
+                // PDF 변환용 복사본 생성
+                const clone = element.cloneNode(true) as HTMLElement;
+
+                // 복잡한 CSS 스타일 제거 (lab 색상 함수 등)
+                const style = document.createElement('style');
+                style.textContent = `
+                    * {
+                        color: #000 !important;
+                        background-color: #fff !important;
+                        border-color: #ccc !important;
+                    }
+                    .text-gray-800 { color: #1f2937 !important; }
+                    .text-gray-500 { color: #6b7280 !important; }
+                    .text-gray-600 { color: #4b5563 !important; }
+                    .bg-gray-50 { background-color: #f9fafb !important; }
+                    .border-gray-200 { border-color: #e5e7eb !important; }
+                    .border-gray-500 { border-color: #6b7280 !important; }
+                `;
+                clone.appendChild(style);
+
+                const opt = {
+                    margin: [0.5, 0.5, 0.5, 0.5],
+                    filename: 'joseph88-portfolio.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: {
+                        scale: 2,
+                        useCORS: true,
+                        allowTaint: true,
+                        backgroundColor: '#ffffff'
+                    },
+                    jsPDF: {
+                        unit: 'in',
+                        format: 'a4',
+                        orientation: 'portrait'
+                    }
+                };
+
+                // PDF 생성 및 다운로드
+                await html2pdf().set(opt).from(clone).save();
+
+                console.log('PDF 변환 성공!');
+            } catch (error) {
+                console.error('PDF 변환 실패:', error);
+                alert('PDF 변환에 실패했습니다. 다시 시도해주세요.');
             }
-
-            // PDF 변환용 복사본 생성
-            const clone = element.cloneNode(true) as HTMLElement;
-
-            // 복잡한 CSS 스타일 제거 (lab 색상 함수 등)
-            const style = document.createElement('style');
-            style.textContent = `
-                * {
-                    color: #000 !important;
-                    background-color: #fff !important;
-                    border-color: #ccc !important;
-                }
-                .text-gray-800 { color: #1f2937 !important; }
-                .text-gray-500 { color: #6b7280 !important; }
-                .text-gray-600 { color: #4b5563 !important; }
-                .bg-gray-50 { background-color: #f9fafb !important; }
-                .border-gray-200 { border-color: #e5e7eb !important; }
-                .border-gray-500 { border-color: #6b7280 !important; }
-            `;
-            clone.appendChild(style);
-
-            const opt = {
-                margin: [0.5, 0.5, 0.5, 0.5],
-                filename: 'joseph88-portfolio.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: {
-                    scale: 2,
-                    useCORS: true,
-                    allowTaint: true,
-                    backgroundColor: '#ffffff'
-                },
-                jsPDF: {
-                    unit: 'in',
-                    format: 'a4',
-                    orientation: 'portrait'
-                }
-            };
-
-            // PDF 생성 및 다운로드
-            await html2pdf().set(opt).from(clone).save();
-
-            console.log('PDF 변환 성공!');
-        } catch (error) {
-            console.error('PDF 변환 실패:', error);
-            alert('PDF 변환에 실패했습니다. 다시 시도해주세요.');
+        } else {
+            // 프로덕션 환경에서는 간단한 메시지
+            alert('🎉 이스터 에그 발견! PDF 변환 기능은 로컬 개발 환경에서만 사용 가능합니다.');
         }
     };
 
