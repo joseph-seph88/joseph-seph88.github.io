@@ -21,7 +21,17 @@
 } */
 
 body {
-  background: #ffffff !important;
+  background: #f8f9fa !important;
   color: #171717 !important;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Courier New', monospace;
+  min-height: 100vh;
+}
+
+/* 폰트 굵기 강제 설정 */
+.font-thin {
+  font-weight: 100 !important;
+}
+
+h2.font-thin {
+  font-weight: 100 !important;
 }
