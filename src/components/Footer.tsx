@@ -31,6 +31,7 @@ export default function Footer() {
             try {
                 // html2pdf 라이브러리 동적 로드
                 const html2pdfModule = await import('html2pdf.js');
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 const html2pdf = (html2pdfModule as any).default || html2pdfModule;
 
                 // 현재 페이지의 메인 콘텐츠만 선택 (헤더 제외)
@@ -86,8 +87,8 @@ export default function Footer() {
                 alert('PDF 변환에 실패했습니다. 다시 시도해주세요.');
             }
         } else {
-            // 프로덕션 환경에서는 간단한 메시지
-            alert('🎉 이스터 에그 발견! PDF 변환 기능은 로컬 개발 환경에서만 사용 가능합니다.');
+            // 프로덕션 환경에서는 아무 동작 안 함
+            // (조용히 무시)
         }
     };
 
