@@ -2,7 +2,7 @@
   "name": "joseph-nextjs",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://joseph-seph88.github.io/joseph-nextjs",
+  "homepage": "https://joseph-seph88.github.io",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
