@@ -37,7 +37,15 @@ jobs:
         run: npm run build
         
       - name: List build output
-        run: ls -la out/
+        run: |
+          ls -la out/
+          echo "=== Checking for index.html ==="
+          if [ -f "out/index.html" ]; then
+            echo "✅ index.html exists"
+            head -5 out/index.html
+          else
+            echo "❌ index.html not found"
+          fi
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
