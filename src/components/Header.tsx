@@ -5,7 +5,7 @@ export default function Header() {
     <div className="flex justify-between items-start mb-8 pb-4">
       <div className="header-left">
         <h1 className="ml-10 mt-7 text-4xl text-gray-700 font-medium tracking-wide">임종섭 (JOSEPH)</h1>
-        <h2 className="ml-11 mt-3 text-2xl text-gray-400 font-light tracking-tight">앱 풀스택 개발자</h2>
+        <h2 className="ml-11 mt-3 text-2xl text-gray-400 font-medium tracking-tight">앱 풀스택 개발자</h2>
       </div>
       <div className="text-right">
         <div className="mb-5">

@@ -4,7 +4,7 @@ export default function AboutMe() {
   return (
     <>
       <div className="text-left mb-2">
-        <h2 className="font-thin text-3xl text-gray-800 ml-70">About Me</h2>
+        <h2 className="font-bold text-3xl text-gray-700 ml-70">About Me</h2>
       </div>
       <div className="border-b-2 border-gray-200 mb-8 ml-70"></div>
 
