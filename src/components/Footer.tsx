@@ -1,10 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function Footer() {
     const [clickCount, setClickCount] = useState(0);
     const [showMessage, setShowMessage] = useState(false);
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     const handleClick = () => {
         const newCount = clickCount + 1;
@@ -30,21 +35,25 @@ export default function Footer() {
                         color: '#666'
                     }}
                 >
-                    <span
-                        className="cursor-pointer transition-all duration-300 hover:scale-110"
-                        style={{ display: 'inline-block' }}
-                        onClick={handleClick}
-                        onMouseEnter={(e) => {
-                            const target = e.target as HTMLElement;
-                            if (target) target.textContent = '⬇️';
-                        }}
-                        onMouseLeave={(e) => {
-                            const target = e.target as HTMLElement;
-                            if (target) target.textContent = '📋';
-                        }}
-                    >
-                        📋
-                    </span> JOSEPH88
+                    {isClient ? (
+                        <span
+                            className="cursor-pointer transition-all duration-300 hover:scale-110"
+                            style={{ display: 'inline-block' }}
+                            onClick={handleClick}
+                            onMouseEnter={(e) => {
+                                const target = e.target as HTMLElement;
+                                if (target) target.textContent = '⬇️';
+                            }}
+                            onMouseLeave={(e) => {
+                                const target = e.target as HTMLElement;
+                                if (target) target.textContent = '📋';
+                            }}
+                        >
+                            📋
+                        </span>
+                    ) : (
+                        <span>📋</span>
+                    )} JOSEPH88
                 </div>
 
                 {showMessage && (

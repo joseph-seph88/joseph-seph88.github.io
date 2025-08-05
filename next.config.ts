@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
   assetPrefix: '',
   images: {
     unoptimized: true
+  },
+  experimental: {
+    esmExternals: false
   }
 };
 
