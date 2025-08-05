@@ -18,11 +18,11 @@ export const metadata: Metadata = {
   keywords: ["Flutter", "NestJS", "TypeScript", "React", "Next.js", "개발자", "포트폴리오"],
   authors: [{ name: "JOSEPH88" }],
   creator: "JOSEPH88",
-  icons: [
-    { rel: 'icon', url: '/favicon.png' },
-    { rel: 'shortcut icon', url: '/favicon.png' },
-    { rel: 'apple-touch-icon', url: '/favicon.png' },
-  ],
+  icons: {
+    icon: '/assets/images/favicon.ico',
+    shortcut: '/assets/images/favicon.ico',
+    apple: '/assets/images/favicon.ico',
+  },
   openGraph: {
     title: "JOSEPH88 - Flutter & NestJS Developer Portfolio",
     description: "Flutter & NestJS 앱/서버 개발자 JOSEPH88의 포트폴리오",
@@ -37,11 +37,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" type="image/png" href="/assets/images/totoro.png" />
-        <link rel="shortcut icon" type="image/png" href="/assets/images/totoro.png" />
-        <link rel="apple-touch-icon" type="image/png" href="/assets/images/totoro.png" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
