@@ -19,9 +19,9 @@ export const metadata: Metadata = {
   authors: [{ name: "JOSEPH88" }],
   creator: "JOSEPH88",
   icons: {
-    icon: '/assets/images/favicon.ico',
-    shortcut: '/assets/images/favicon.ico',
-    apple: '/assets/images/favicon.ico',
+    icon: '/app/favicon.ico',
+    shortcut: '/app/favicon.ico',
+    apple: '/app/favicon.ico',
   },
   openGraph: {
     title: "JOSEPH88 - Flutter & NestJS Developer Portfolio",
