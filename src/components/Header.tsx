@@ -18,7 +18,7 @@ export default function Header() {
               className="object-contain"
             />
           </a>
-          <a href="https://trusted-reptile-257.notion.site/244618c1c2c180689068efed252bcc99?v=244618c1c2c181d7b0bb000cb4f4379e&source=copy_link" className="no-underline mr-4 inline-block bg-gray-100 rounded-full p-3 transition-transform duration-200 hover:scale-110 hover:bg-gray-200 border-1 border-gray-300">
+          <a href="https://trusted-reptile-257.notion.site/Joseph88-s-Portfolio-1a4618c1c2c18038825fee0b423150f2" className="no-underline mr-4 inline-block bg-gray-100 rounded-full p-3 transition-transform duration-200 hover:scale-110 hover:bg-gray-200 border-1 border-gray-300">
             <Image
               src="/assets/images/notion_logo.png"
               alt="Notion"
@@ -28,7 +28,8 @@ export default function Header() {
             />
           </a>
         </div>
-        <p className="text-base m-0">Email: <strong>pathetic.sim@gmail.com</strong></p>
+        <p className="text-base mt-10">Email: <strong>pathetic.sim@gmail.com</strong></p>
+        <p className="text-base mr-12 text-gray-100 italic">BE STRONG AND COURAGEOUS</p>
       </div>
     </div>
   );

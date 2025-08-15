@@ -5,6 +5,7 @@ import ProblemSolving from "@/components/ProblemSolving";
 import Experience from "@/components/Experience";
 import Skills from "@/components/Skills";
 import CertificatesEducation from "@/components/CertificatesEducation";
+import Project from "@/components/Project";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <AboutMe />
       <ProblemSolving />
       <Experience />
+      <Project />
       <Skills />
       <CertificatesEducation />
       <Footer />
