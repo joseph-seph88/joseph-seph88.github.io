@@ -9,7 +9,7 @@ export default function Header() {
       </div>
       <div className="text-right">
         <div className="mb-5">
-          <a href="https://github.com/joseph-seph88" className="no-underline mr-4 inline-block bg-gray-100 rounded-full p-3 transition-transform duration-200 hover:scale-110 hover:bg-gray-200 border-1 border-gray-300">
+          <a href="https://github.com/joseph-seph88/mi-mine-app" className="no-underline mr-4 inline-block bg-gray-100 rounded-full p-3 transition-transform duration-200 hover:scale-110 hover:bg-gray-200 border-1 border-gray-300">
             <Image
               src="/assets/images/git_logo.png"
               alt="GitHub"
