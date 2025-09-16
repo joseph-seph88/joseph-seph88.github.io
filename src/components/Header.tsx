@@ -29,7 +29,15 @@ export default function Header() {
           </a>
         </div>
         <p className="text-base mt-10">Email: <strong>pathetic.sim@gmail.com</strong></p>
-        <p className="text-base mr-12 text-gray-100 italic">BE STRONG AND COURAGEOUS</p>
+        <a href="https://github.com/joseph-seph88/mi-mine-app" target="_blank" rel="noopener noreferrer" className="block text-base mt-1">
+          App: <strong>🔗 View Code</strong>
+        </a>
+        <a href="https://github.com/joseph-seph88/mi-mine-web" target="_blank" rel="noopener noreferrer" className="block text-base mt-1">
+          Web: <strong>🔗 View Code</strong>
+        </a>
+        <a href="https://github.com/joseph-seph88/mi-mine-server" target="_blank" rel="noopener noreferrer" className="block text-base mt-1">
+          Server: <strong>🔗 View Code</strong>
+        </a>
       </div>
     </div>
   );
