@@ -18,7 +18,7 @@ export default function Header() {
               className="object-contain"
             />
           </a>
-          <a href="https://trusted-reptile-257.notion.site/Joseph88-s-Portfolio-1a4618c1c2c18038825fee0b423150f2" className="no-underline mr-4 inline-block bg-gray-100 rounded-full p-3 transition-transform duration-200 hover:scale-110 hover:bg-gray-200 border-1 border-gray-300">
+          <a href="https://trusted-reptile-257.notion.site/Joseph88-s-Portfolio-271618c1c2c18019b492f2436d244345?pvs=74" className="no-underline mr-4 inline-block bg-gray-100 rounded-full p-3 transition-transform duration-200 hover:scale-110 hover:bg-gray-200 border-1 border-gray-300">
             <Image
               src="/assets/images/notion_logo.png"
               alt="Notion"
