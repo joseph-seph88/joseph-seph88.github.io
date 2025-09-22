@@ -25,7 +25,7 @@ export default function AboutMe() {
           </p>
 
           <p>또한 <strong>Python</strong>과 <strong>NextJS</strong>를 활용한 개발 경험이 있으며,
-            다양한 기술 스택의 구조와 패턴에 대한 이해를 바탕으로 유연하게 문제를 해결해나가는 개발자입니다.
+            필요에 따라 다양한 기술 스택의 구조와 패턴에 대한 이해를 바탕으로 유연하게 문제를 해결해나가는 개발자입니다.
           </p>
 
           <br />
